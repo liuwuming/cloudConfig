@@ -1,0 +1,95 @@
+#vendor
+zfec.datasource.driverClassName = org.postgresql.Driver
+zfec.datasource.url = jdbc:postgresql://192.168.47.107:5432/vendor
+zfec.datasource.username = postgres
+zfec.datasource.password = postgres
+#初始化连接数量，最大最小连接数
+zfec.datasource.initialSize = 5
+zfec.datasource.maxActive = 11
+zfec.datasource.minIdle = 3
+#获取连接等待超时的时间
+zfec.datasource.maxWait = 600000
+#超过时间限制是否回收
+zfec.datasource.removeAbandoned = true
+#超过时间限制多长
+zfec.datasource.removeAbandonedTimeout = 180
+#配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+zfec.datasource.timeBetweenEvictionRunsMillis = 600000
+#配置一个连接在池中最小生存的时间，单位是毫秒
+zfec.datasource.minEvictableIdleTimeMillis = 300000
+#用来检测连接是否有效的sql，要求是一个查询语句
+zfec.datasource.validationQuery = SELECT 1 
+#申请连接的时候检测
+zfec.datasource.testWhileIdle = true
+#申请连接时执行validationQuery检测连接是否有效，配置为true会降低性能
+zfec.datasource.testOnBorrow = false
+#归还连接时执行validationQuery检测连接是否有效，配置为true会降低性能
+zfec.datasource.testOnReturn = false
+#打开PSCache，并且指定每个连接上PSCache的大小
+zfec.datasource.poolPreparedStatements = true
+zfec.datasource.maxPoolPreparedStatementPerConnectionSize = 50
+#属性类型是字符串，通过别名的方式配置扩展插件，常用的插件有：
+#监控统计用的filter:stat 日志用的filter:log4j 防御SQL注入的filter:wall
+zfec.datasource.filters = stat,wall,slf4j
+
+###########################################################################
+
+#testdb 
+zfec.testdb.datasource.driverClassName = org.postgresql.Driver
+zfec.testdb.datasource.url = jdbc:postgresql://192.168.47.107:5432/testdb
+zfec.testdb.datasource.username = postgres
+zfec.testdb.datasource.password = postgres
+#初始化连接数量，最大最小连接数
+zfec.testdb.datasource.initialSize = 5
+zfec.testdb.datasource.maxActive = 11
+zfec.testdb.datasource.minIdle = 3
+#获取连接等待超时的时间
+zfec.testdb.datasource.maxWait = 600000
+#超过时间限制是否回收
+zfec.testdb.datasource.removeAbandoned = true
+#超过时间限制多长
+zfec.testdb.datasource.removeAbandonedTimeout = 180
+#配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+zfec.testdb.datasource.timeBetweenEvictionRunsMillis = 600000
+#配置一个连接在池中最小生存的时间，单位是毫秒
+zfec.testdb.datasource.minEvictableIdleTimeMillis = 300000
+#用来检测连接是否有效的sql，要求是一个查询语句
+zfec.testdb.datasource.validationQuery = SELECT 1 
+#申请连接的时候检测
+zfec.testdb.datasource.testWhileIdle = true
+#申请连接时执行validationQuery检测连接是否有效，配置为true会降低性能
+zfec.testdb.datasource.testOnBorrow = false
+#归还连接时执行validationQuery检测连接是否有效，配置为true会降低性能
+zfec.testdb.datasource.testOnReturn = false
+#打开PSCache，并且指定每个连接上PSCache的大小
+zfec.testdb.datasource.poolPreparedStatements = true
+zfec.testdb.datasource.maxPoolPreparedStatementPerConnectionSize = 50
+#属性类型是字符串，通过别名的方式配置扩展插件，常用的插件有：
+#监控统计用的filter:stat 日志用的filter:log4j 防御SQL注入的filter:wall
+zfec.testdb.datasource.filters = stat,wall,slf4j
+
+###########################################################################
+
+zfec.redis.nodes = 192.168.47.103:6381,192.168.47.103:6382,192.168.47.103:6383
+zfec.redis.password = 123456
+# 连接池最大连接数（使用负值表示没有限制）
+#zfec.redis.maxActive = 8  
+# 连接池最大阻塞等待时间（使用负值表示没有限制）
+zfec.redis.maxWait = 4000  
+# 连接池中的最大空闲连接
+zfec.redis.maxIdle = 8  
+# 连接池中的最小空闲连接
+zfec.redis.minIdle = 0  
+# 连接超时时间（毫秒）
+zfec.redis.timeout = 5000
+# 是否在从池中取出连接前进行检验,如果检验失败,则从池中去除连接并尝试取出另一个
+zfec.redis.testOnBorrow = true
+# 执行命令超时时间
+zfec.redis.soTimeout = 3000
+# 重试次数
+zfec.redis.maxAttempts = 5
+
+
+
+
+
